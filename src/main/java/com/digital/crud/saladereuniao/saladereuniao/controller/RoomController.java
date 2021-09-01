@@ -23,7 +23,7 @@ public class RoomController {
         return roomRepository.findAll();
     }
 
-    @GetMapping("/room/id")
+    @GetMapping("/room/{id}")
     public ResponseEntity<Room> getRoomById(@PathVariable(value = "id") long roomId)
         throws ResourceNotFoundException {
         Room room = roomRepository.findById(roomId)
